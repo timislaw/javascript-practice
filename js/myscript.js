@@ -3,7 +3,7 @@ adding a multiline comment for js
 see
 */
 //this is a single line comment
-console.log(4 + 2)
+/*console.log(4 + 2)
 console.log("Tim Ross")
 console.log("Pancakes")
 //take-home update
@@ -25,7 +25,7 @@ const oneNumber = prompt("Enter number value", 10);
 const newNumber = prompt("Enter a new number", 10);
 const addIt = parseInt(oneNumber) + parseInt(newNumber);
 alert(addIt);
-
+*/
 // Ask for the user's first name
 const newFirst = prompt("Enter new first name");
 // Ask for the user's last name
@@ -37,14 +37,9 @@ alert(newLast);
 
 // *BONUS* 
 // Ask for the user's birthday
-let userBirth = prompt("Enter your birthday", 06/21/1992);
+let userBirth = prompt("Enter your birthday", 07-25);
 // Ask the user to confirm their birthday input
 if (confirm(userBirth)){
-    txt = "Happy belated birthday??";
+    alert(userBirth);
 }
-    else {
-        txt = "Looks like this was the wrong birthday";
-    }
-
-
 // Alert the user's birthday
