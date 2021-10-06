@@ -70,12 +70,53 @@ if (typeof firstNum && typeof secondNum !== "number"){
     alert(`${secondNum} is larger!`)
 }
 */
-let numOne = prompt("Enter the first number");
-let numTwo = prompt("Enter the second number");
-numOne = parseInt(numOne);
-numTwo = parseInt(numTwo);
-console.log(numOne >= numTwo);
+// let numOne = prompt("Enter the first number");
+// let numTwo = prompt("Enter the second number");
+// numOne = parseInt(numOne);
+// numTwo = parseInt(numTwo);
+// console.log(numOne >= numTwo);
 
-if (typeof numOne && typeof numTwo !== "number"){
-    alert(`This is not a number`)
+// if (typeof numOne && typeof numTwo !== "number"){
+//     alert(`This is not a number`)
+// }
+// const num1str = prompt('Enter n 1');
+// const num2str = prompt('enter num 2');
+
+// const num1 = parseInt(num1str);
+// const num2 = parseInt(num2str);
+
+// if (Number.isNaN(num1) || Number.isNaN(num2)) {
+    
+//     alert("Not a number");
+
+// } else {
+
+//     if (num1 > num2) {
+//         alert(num1);
+//     } else if (num1 === num2) {
+//         alert('both equal');
+//     } else {
+//         alert(num2);
+//     }
+// }
+/*
+
+    Create a new codepen
+    Write a function that accepts a number as an argument
+    Alert the user whether the given number is even or odd
+    Call your function
+
+*/
+function oddEven(number) {
+    if (number %2 == 0) {
+        alert('even');
+    } else if (number !== Number){ //resolve this, doesnt run
+        alert('not a number');
+    } else {
+        alert('odd');
+    }
 }
+
+const typeNumber = prompt("enter even or odd #");
+
+oddEven(typeNumber);
