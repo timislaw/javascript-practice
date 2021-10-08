@@ -107,16 +107,118 @@ if (typeof firstNum && typeof secondNum !== "number"){
     Call your function
 
 */
-function oddEven(number) {
-    if (number %2 == 0) {
-        alert('even');
-    } else if (number !== Number){ //resolve this, doesnt run
-        alert('not a number');
-    } else {
-        alert('odd');
-    }
+// function oddEven(number) {
+//     if (number %2 == 0) {
+//         alert('even');
+//     } else if (number !== Number){ //resolve this, doesnt run
+//         alert('not a number');
+//     } else {
+//         alert('odd');
+//     }
+// }
+
+// const typeNumber = prompt("enter even or odd #");
+
+// oddEven(typeNumber);
+// function NewPassword(inputtxt)
+// {
+//     const passWord = prompt('Enter password');
+//     if(inputtxt.valueOf.match(passWord)){
+//         alert("Correct")
+//         return true;
+//     } else {
+//         alert('Wrong, please enter a password')
+//         return false;
+//     }
+// }
+// NewPassword()
+
+// function isEven(number) {
+
+//     const numberfied = Number(number);
+
+//     if (Number.isNaN(numberfied) || numberfied % 1 !==0 || typeof number !== "number") {
+//         throw Error("must be whole integer");
+//     }
+
+// console.log(number);
+
+//     //modulus
+//     //mod
+//     //% <---- mod operator, means remainder
+//     //remainder will be 0 if we divide an even number by 2
+
+//     if (number % 2 === 0) {
+//         return true;
+//     }
+
+//         return false;
+
+// }
+
+// console.log(isEven(-3));
+// console.log(isEven(-2));
+// console.log(isEven(-0));
+// console.log(isEven(0));
+// console.log(isEven(+8));
+// console.log(isEven());
+// console.log(isEven("sdlkfjsldf"));
+// console.log(isEven("5"));
+// console.log(isEven("2"));
+
+function isInRange(text, min, max) {
+
+    const passLength = text.length;
+
+    if(length >= min && length <= max) {
+        return true;
+    } 
+
+        return false;
+
+
 }
 
-const typeNumber = prompt("enter even or odd #");
+console.log(isInRange("1234567", 6, 20));
 
-oddEven(typeNumber);
+function startsWithLetter(text) {
+
+    const firstLetter = text.charAt(0).toLowerCase();
+
+    const letters = "abcdefghiklmnopqrstuvwxyz"
+
+    if (firstLetter && letters.includes(firstLetter)) {
+        return true;
+    }
+
+    return false
+
+
+}
+
+// console.log(startsWithLetter("abc"));
+// console.log(startsWithLetter("1bc"));
+// console.log(startsWithLetter("%bc"));
+// console.log(startsWithLetter(""));
+// console.log(startsWithLetter(4));
+// console.log(startsWithLetter(undefined));
+
+function isValidPass(password) {
+    if (startsWithLetter(password) && isInRange(password, 6, 20)) {
+        return true;
+    }
+
+    return false;
+
+
+}
+
+
+console.log(isValidPass("")); //false
+console.log(isValidPass("f1234")); // false
+console.log(isValidPass("f123456789")); //true
+console.log(isValidPass("F12345678")); //true
+console.log(isValidPass("%654576")); //false
+console.log(isValidPass("-%235564")); //false
+console.log(isValidPass("199834859893459838989548359834894589389589438953")); //false
+
