@@ -166,59 +166,86 @@ if (typeof firstNum && typeof secondNum !== "number"){
 // console.log(isEven("5"));
 // console.log(isEven("2"));
 
-function isInRange(text, min, max) {
+// function isInRange(text, min, max) {
 
-    const passLength = text.length;
+//     const passLength = text.length;
 
-    if(length >= min && length <= max) {
-        return true;
-    } 
+//     if(length >= min && length <= max) {
+//         return true;
+//     } 
 
-        return false;
+//         return false;
 
 
-}
+// }
 
-console.log(isInRange("1234567", 6, 20));
+// console.log(isInRange("1234567", 6, 20));
 
-function startsWithLetter(text) {
+// function startsWithLetter(text) {
 
-    const firstLetter = text.charAt(0).toLowerCase();
+//     const firstLetter = text.charAt(0).toLowerCase();
 
-    const letters = "abcdefghiklmnopqrstuvwxyz"
+//     const letters = "abcdefghiklmnopqrstuvwxyz"
 
-    if (firstLetter && letters.includes(firstLetter)) {
-        return true;
+//     if (firstLetter && letters.includes(firstLetter)) {
+//         return true;
+//     }
+
+//     return false
+
+
+// }
+
+// // console.log(startsWithLetter("abc"));
+// // console.log(startsWithLetter("1bc"));
+// // console.log(startsWithLetter("%bc"));
+// // console.log(startsWithLetter(""));
+// // console.log(startsWithLetter(4));
+// // console.log(startsWithLetter(undefined));
+
+// function isValidPass(password) {
+//     if (startsWithLetter(password) && isInRange(password, 6, 20)) {
+//         return true;
+//     }
+
+//     return false;
+
+
+// }
+
+
+// console.log(isValidPass("")); //false
+// console.log(isValidPass("f1234")); // false
+// console.log(isValidPass("f123456789")); //true
+// console.log(isValidPass("F12345678")); //true
+// console.log(isValidPass("%654576")); //false
+// console.log(isValidPass("-%235564")); //false
+// console.log(isValidPass("199834859893459838989548359834894589389589438953")); //false
+
+//fizzbuzz challenge
+// function fizzBuzz(){
+//     for (let i = 1; i <= 100; i++){
+//         if ( i % 3 === 0 && i % 5 === 0) {
+//             console.log("FizzBuzz");
+//         } else if ( i % 3 === 0) {
+//             console.log("Fizz");
+//         } else if ( i % 5 === 0) {
+//             console.log("Buzz");
+//         } else {
+//             console.log(i);
+//         }
+//     }
+// }
+function fizzBuzz(){
+    for (let i = 1; i <= 100; i++){
+        if (i % 3 === 0 && i % 5 === 0){
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0){
+        console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
     }
-
-    return false
-
-
 }
-
-// console.log(startsWithLetter("abc"));
-// console.log(startsWithLetter("1bc"));
-// console.log(startsWithLetter("%bc"));
-// console.log(startsWithLetter(""));
-// console.log(startsWithLetter(4));
-// console.log(startsWithLetter(undefined));
-
-function isValidPass(password) {
-    if (startsWithLetter(password) && isInRange(password, 6, 20)) {
-        return true;
-    }
-
-    return false;
-
-
-}
-
-
-console.log(isValidPass("")); //false
-console.log(isValidPass("f1234")); // false
-console.log(isValidPass("f123456789")); //true
-console.log(isValidPass("F12345678")); //true
-console.log(isValidPass("%654576")); //false
-console.log(isValidPass("-%235564")); //false
-console.log(isValidPass("199834859893459838989548359834894589389589438953")); //false
-
